@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.happyfjp.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="Spring学习-第一天上下文配置123456&lt;!-- 只是为了方便把属性放到一起，实际有些属性不能放一起 --&gt;&lt;bean id&#x3D;&quot;id&quot; class&#x3D;&quot;com.xxx.xxx&quot; scope&#x3D;&quot;singleton&quot; init-method&#x3D;&quot;method&quot;    destroy-method&#x3D;&amp;qu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSM学习-第一天">
+<meta property="og:url" content="https://blog.happyfjp.com/2022/01/10/java/ssm/spring-01/index.html">
+<meta property="og:site_name" content="方糖的博客">
+<meta property="og:description" content="Spring学习-第一天上下文配置123456&lt;!-- 只是为了方便把属性放到一起，实际有些属性不能放一起 --&gt;&lt;bean id&#x3D;&quot;id&quot; class&#x3D;&quot;com.xxx.xxx&quot; scope&#x3D;&quot;singleton&quot; init-method&#x3D;&quot;method&quot;    destroy-method&#x3D;&amp;qu">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-01-10T14:23:40.000Z">
+<meta property="article:modified_time" content="2022-01-17T07:39:28.864Z">
+<meta property="article:author" content="FJP">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="spring">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.happyfjp.com/2022/01/10/java/ssm/spring-01/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.happyfjp.com/2022/01/10/java/ssm/spring-01/","path":"2022/01/10/java/ssm/spring-01/","title":"SSM学习-第一天"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>SSM学习-第一天 | 方糖的博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">方糖的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring%E5%AD%A6%E4%B9%A0-%E7%AC%AC%E4%B8%80%E5%A4%A9"><span class="nav-number">1.</span> <span class="nav-text">Spring学习-第一天</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">上下文配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96jdbc-properties"><span class="nav-number">1.1.1.</span> <span class="nav-text">读取jdbc.properties</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E5%8E%9F%E5%A7%8B%E6%B3%A8%E8%A7%A3"><span class="nav-number">1.2.</span> <span class="nav-text">Spring原始注解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E6%96%B0%E6%B3%A8%E8%A7%A3"><span class="nav-number">1.3.</span> <span class="nav-text">Spring新注解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E9%9B%86%E6%88%90Junit"><span class="nav-number">1.4.</span> <span class="nav-text">Spring集成Junit</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">FJP</p>
+  <div class="site-description" itemprop="description">生活明朗，万物可爱</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.happyfjp.com/2022/01/10/java/ssm/spring-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FJP">
+      <meta itemprop="description" content="生活明朗，万物可爱">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="方糖的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SSM学习-第一天
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-01-10 22:23:40" itemprop="dateCreated datePublished" datetime="2022-01-10T22:23:40+08:00">2022-01-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-01-17 15:39:28" itemprop="dateModified" datetime="2022-01-17T15:39:28+08:00">2022-01-17</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Spring学习-第一天"><a href="#Spring学习-第一天" class="headerlink" title="Spring学习-第一天"></a>Spring学习-第一天</h2><h3 id="上下文配置"><a href="#上下文配置" class="headerlink" title="上下文配置"></a>上下文配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 只是为了方便把属性放到一起，实际有些属性不能放一起 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;id&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.xxx.xxx&quot;</span> <span class="attr">scope</span>=<span class="string">&quot;singleton&quot;</span> <span class="attr">init-method</span>=<span class="string">&quot;method&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">destroy-method</span>=<span class="string">&quot;method&quot;</span> <span class="attr">factory-method</span>=<span class="string">&quot;getUserDao&quot;</span> <span class="attr">p:bean-ref</span>=<span class="string">&quot;beanid&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;SetMethod&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;userDao&quot;</span> <span class="attr">value</span>=<span class="string">&quot;xxx&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">name</span>=<span class="string">&quot;argName&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;beanid&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>id: bean的唯一id，不可重复</li>
+<li>class: bean的全限定名</li>
+<li>scope: bean的作用范围<ul>
+<li>singleton: 默认值，单例的。运行时创建。</li>
+<li>prototype: 多例的。调用时创建。</li>
+<li>request: WEB项目独有，创建时自动装配到request域中</li>
+<li>session: 和上边同理</li>
+<li>global session: WEB独有，应用在portlet环境，如果没有portlet环境相当于session</li>
+</ul>
+</li>
+<li>init-method: 初始化方法</li>
+<li>destroy-method: 销毁方法</li>
+<li>factory-method: 当有此属性时，自动寻找类中的此方法调用，而不是调用无参构造。</li>
+<li>property-name: 注入需要调用的方法的名称，去掉set前缀。</li>
+<li>property-ref: 需要注入的bean的id</li>
+<li>property-value: 需要注入的普通数据类型</li>
+<li>p:bean-ref: 简化property标签，直接用setName-ref指定注入的对象及操作。需要先引入p命名空间</li>
+<li><code>&lt;constructor-arg&gt;</code>-name: 构造参数</li>
+<li><code>&lt;constructor-arg&gt;</code>-ref: 注入的beanid</li>
+<li><code>&lt;import&gt;</code>: 导入其他xml配置</li>
+</ul>
+<h4 id="读取jdbc-properties"><a href="#读取jdbc-properties" class="headerlink" title="读取jdbc.properties"></a>读取jdbc.properties</h4><p>首先，需要引入context命名空间和约束路径</p>
+<ul>
+<li><p>命名空间 xmlns:context=”<a target="_blank" rel="noopener" href="http://www.springframework.org/schema/context&quot;">http://www.springframework.org/schema/context&quot;</a></p>
+</li>
+<li><p>约束路径 <a target="_blank" rel="noopener" href="http://www.springframework.org/schema/context">http://www.springframework.org/schema/context</a></p>
+<pre><code>            http://www.springframework.org/schema/context/spring-context.xsd
+</code></pre>
+</li>
+<li><p><code>&lt;context:property-placeholder location=&quot;jdbc.properties&quot; /&gt;</code></p>
+</li>
+<li><p>用${key}的形式引用</p>
+</li>
+</ul>
+<h3 id="Spring原始注解"><a href="#Spring原始注解" class="headerlink" title="Spring原始注解"></a>Spring原始注解</h3><ul>
+<li><p>@Component 用于在类上实例化bean</p>
+</li>
+<li><p>@Controller 在web层上实例化bean</p>
+</li>
+<li><p>@Service service层实例化bean</p>
+</li>
+<li><p>@Repository dao层实例化bean</p>
+</li>
+<li><p>@Autowired 使用在字段上用于根据类型依赖注入</p>
+</li>
+<li><p>@Qualifier 结合@Autowired一起使用用于根据名称进行依赖注入</p>
+</li>
+<li><p>@Resource 相当于上面俩合体</p>
+</li>
+<li><p>@Value 注入普通类型</p>
+</li>
+<li><p>@Scope 标注bean的作用范围</p>
+</li>
+<li><p>@PostConstruct 标注方法是初始化方法</p>
+</li>
+<li><p>@PreDestroy 标注方法是销毁方法 </p>
+</li>
+</ul>
+<h3 id="Spring新注解"><a href="#Spring新注解" class="headerlink" title="Spring新注解"></a>Spring新注解</h3><ul>
+<li><p>@Configuration 指定当前类是一个Spring配置类，当创建容器时会从该类上加载注解</p>
+</li>
+<li><p>@ComponentScan 指定Spirng初始化时要扫描的包，和xml中配置一样</p>
+</li>
+<li><p>@Bean 使用在方法上，将该方法的返回值储存到Spring容器中</p>
+</li>
+<li><p>@PropertySource 加载.properties文件中的配置</p>
+</li>
+<li><p>@Import 导入其他配置类</p>
+</li>
+</ul>
+<h3 id="Spring集成Junit"><a href="#Spring集成Junit" class="headerlink" title="Spring集成Junit"></a>Spring集成Junit</h3><ul>
+<li><p>@RunWith(SpringJUnit4ClassRunner.class)</p>
+</li>
+<li><p>@ContextConfiguration()直接填指定配置文件，classes属性指定配置类</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+              <a href="/tags/spring/" rel="tag"># spring</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/01/09/java/srpingboot/springboot-01/" rel="prev" title="springboot学习-第一天">
+                  <i class="fa fa-chevron-left"></i> springboot学习-第一天
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/01/17/java/ssm/springmvc/" rel="next" title="SSM-SpringMVC">
+                  SSM-SpringMVC <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FJP</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">5k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+
+</body>
+</html>

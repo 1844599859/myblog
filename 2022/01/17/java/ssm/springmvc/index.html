@@ -22,27 +22,30 @@
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.happyfjp.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="欢迎使用 Hexo! 这是系统生成的第一篇文章。 前往 documentation 获取更多信息。 如果你在使用Hexo过程中遇到任何问题， 你可以在 troubleshooting 找到答案或者在 GitHub 联系我。 快速开始新建文章1$ hexo new &quot;My New Post&quot;  更多信息： Writing 运行服务1$ hexo server  更多信息： Ser">
+<meta name="description" content="SpringMVCSpringMVC相关组件 前端控制器：DispatcherServlet  处理器映射器： HandlerMapping  处理器适配器：HandlerAdapter  处理器：Handler  视图解析器：ViewResolver  视图：View   SpringMVC的注解和配置 请求映射注解：RequestMapping  视图解析器配置：  REDIRECT_URL_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新手教程">
-<meta property="og:url" content="https://blog.happyfjp.com/2021/08/29/hello-world/index.html">
+<meta property="og:title" content="SSM-SpringMVC">
+<meta property="og:url" content="https://blog.happyfjp.com/2022/01/17/java/ssm/springmvc/index.html">
 <meta property="og:site_name" content="方糖的博客">
-<meta property="og:description" content="欢迎使用 Hexo! 这是系统生成的第一篇文章。 前往 documentation 获取更多信息。 如果你在使用Hexo过程中遇到任何问题， 你可以在 troubleshooting 找到答案或者在 GitHub 联系我。 快速开始新建文章1$ hexo new &quot;My New Post&quot;  更多信息： Writing 运行服务1$ hexo server  更多信息： Ser">
+<meta property="og:description" content="SpringMVCSpringMVC相关组件 前端控制器：DispatcherServlet  处理器映射器： HandlerMapping  处理器适配器：HandlerAdapter  处理器：Handler  视图解析器：ViewResolver  视图：View   SpringMVC的注解和配置 请求映射注解：RequestMapping  视图解析器配置：  REDIRECT_URL_">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-29T09:35:52.275Z">
-<meta property="article:modified_time" content="2022-01-17T11:37:40.508Z">
+<meta property="article:published_time" content="2022-01-17T11:29:10.000Z">
+<meta property="article:modified_time" content="2022-01-23T12:42:16.171Z">
 <meta property="article:author" content="FJP">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="spring">
+<meta property="article:tag" content="springmvc">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://blog.happyfjp.com/2021/08/29/hello-world/">
+<link rel="canonical" href="https://blog.happyfjp.com/2022/01/17/java/ssm/springmvc/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.happyfjp.com/2021/08/29/hello-world/","path":"2021/08/29/hello-world/","title":"新手教程"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.happyfjp.com/2022/01/17/java/ssm/springmvc/","path":"2022/01/17/java/ssm/springmvc/","title":"SSM-SpringMVC"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>新手教程 | 方糖的博客</title>
+<title>SSM-SpringMVC | 方糖的博客</title>
   
 
 
@@ -122,7 +125,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="nav-number">1.</span> <span class="nav-text">快速开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0"><span class="nav-number">1.1.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.2.</span> <span class="nav-text">运行服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6"><span class="nav-number">1.3.</span> <span class="nav-text">生成静态文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">部署到远程服务器</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringMVC"><span class="nav-number">1.</span> <span class="nav-text">SpringMVC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SpringMVC%E7%9B%B8%E5%85%B3%E7%BB%84%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">SpringMVC相关组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SpringMVC%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%92%8C%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">SpringMVC的注解和配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SpringMVC%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E6%96%B9%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">SpringMVC的数据响应方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%91"><span class="nav-number">1.4.</span> <span class="nav-text">坑</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,7 +182,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.happyfjp.com/2021/08/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://blog.happyfjp.com/2022/01/17/java/ssm/springmvc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +195,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          新手教程
+          SSM-SpringMVC
         </h1>
 
         <div class="post-meta-container">
@@ -203,14 +206,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-08-29 17:35:52" itemprop="dateCreated datePublished" datetime="2021-08-29T17:35:52+08:00">2021-08-29</time>
+      <time title="创建时间：2022-01-17 19:29:10" itemprop="dateCreated datePublished" datetime="2022-01-17T19:29:10+08:00">2022-01-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-01-17 19:37:40" itemprop="dateModified" datetime="2022-01-17T19:37:40+08:00">2022-01-17</time>
+      <time title="修改时间：2022-01-23 20:42:16" itemprop="dateModified" datetime="2022-01-23T20:42:16+08:00">2022-01-23</time>
     </span>
 
   
@@ -220,7 +223,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>247</span>
+      <span>583</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -238,19 +241,69 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>欢迎使用 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! 这是系统生成的第一篇文章。 前往 <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> 获取更多信息。 如果你在使用Hexo过程中遇到任何问题， 你可以在 <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> 找到答案或者在 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a> 联系我。</p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>更多信息： <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>更多信息： <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>更多信息： <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程服务器"><a href="#部署到远程服务器" class="headerlink" title="部署到远程服务器"></a>部署到远程服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>更多信息： <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h2 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h2><h3 id="SpringMVC相关组件"><a href="#SpringMVC相关组件" class="headerlink" title="SpringMVC相关组件"></a>SpringMVC相关组件</h3><ul>
+<li><p>前端控制器：DispatcherServlet</p>
+</li>
+<li><p>处理器映射器： HandlerMapping</p>
+</li>
+<li><p>处理器适配器：HandlerAdapter</p>
+</li>
+<li><p>处理器：Handler</p>
+</li>
+<li><p>视图解析器：ViewResolver</p>
+</li>
+<li><p>视图：View</p>
+</li>
+</ul>
+<h3 id="SpringMVC的注解和配置"><a href="#SpringMVC的注解和配置" class="headerlink" title="SpringMVC的注解和配置"></a>SpringMVC的注解和配置</h3><ul>
+<li><p>请求映射注解：RequestMapping</p>
+</li>
+<li><p>视图解析器配置：</p>
+<ul>
+<li><p>REDIRECT_URL_PREFIX=”redirect:”</p>
+</li>
+<li><p>FORWARD_URL_PREFIX=”forward:”</p>
+</li>
+<li><p>prefix=””</p>
+</li>
+<li><p>suffix=”” </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="SpringMVC的数据响应方式"><a href="#SpringMVC的数据响应方式" class="headerlink" title="SpringMVC的数据响应方式"></a>SpringMVC的数据响应方式</h3><ol>
+<li><p>页面跳转</p>
+<ul>
+<li><p>直接返回字符串</p>
+<ul>
+<li>返回的字符串优先解释为一个页面地址，通过上面的视图解析器配置，可以进行简化</li>
+</ul>
+</li>
+<li><p>通过ModelAndView对象返回</p>
+<ul>
+<li>可以自己new一个对象，也可以把对象放到形参里，spring会自动注入。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>回写数据</p>
+<ul>
+<li><p>直接返回字符串</p>
+<ul>
+<li>通过@ResponseBody注解告诉框架，此函数返回内容就是响应体，不用跳转</li>
+</ul>
+</li>
+<li><p>返回对象或集合</p>
+<ul>
+<li>指定转换器，返回对象就会自动转换。也可以添加<a href="mvc:annotation-driven/">mvc:annotation-driven/</a>自动添加转换器。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h3><ul>
+<li>再项目已经用其他方式运行后，再添加mvc包。可能会出现mvc包没有输出到依赖目录下的情况。然后运行的时候报错还不明显，只有开始的时候有一行，刷的一下就不见了。所以以后有问题可以看看工件的输出结构。（此问题浪费我一个小时）</li>
+</ul>
 
     </div>
 
@@ -259,15 +312,23 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+              <a href="/tags/spring/" rel="tag"># spring</a>
+              <a href="/tags/springmvc/" rel="tag"># springmvc</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2022/01/10/java/ssm/spring-01/" rel="prev" title="SSM学习-第一天">
+                  <i class="fa fa-chevron-left"></i> SSM学习-第一天
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/08/29/%E7%83%AD%E7%83%88%E5%BA%86%E7%A5%9D%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/" rel="next" title="热烈庆祝博客上线">
-                  热烈庆祝博客上线 <i class="fa fa-chevron-right"></i>
+                <a href="/2022/01/18/vscode%E6%8F%92%E4%BB%B6/" rel="next" title="VSCODE插件开发总结">
+                  VSCODE插件开发总结 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

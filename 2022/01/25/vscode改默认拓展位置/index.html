@@ -22,27 +22,26 @@
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.happyfjp.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="欢迎使用 Hexo! 这是系统生成的第一篇文章。 前往 documentation 获取更多信息。 如果你在使用Hexo过程中遇到任何问题， 你可以在 troubleshooting 找到答案或者在 GitHub 联系我。 快速开始新建文章1$ hexo new &quot;My New Post&quot;  更多信息： Writing 运行服务1$ hexo server  更多信息： Ser">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新手教程">
-<meta property="og:url" content="https://blog.happyfjp.com/2021/08/29/hello-world/index.html">
+<meta property="og:title" content="VSCODE改默认拓展位置">
+<meta property="og:url" content="https://blog.happyfjp.com/2022/01/25/vscode%E6%94%B9%E9%BB%98%E8%AE%A4%E6%8B%93%E5%B1%95%E4%BD%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="方糖的博客">
-<meta property="og:description" content="欢迎使用 Hexo! 这是系统生成的第一篇文章。 前往 documentation 获取更多信息。 如果你在使用Hexo过程中遇到任何问题， 你可以在 troubleshooting 找到答案或者在 GitHub 联系我。 快速开始新建文章1$ hexo new &quot;My New Post&quot;  更多信息： Writing 运行服务1$ hexo server  更多信息： Ser">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-29T09:35:52.275Z">
-<meta property="article:modified_time" content="2022-01-17T11:37:40.508Z">
+<meta property="article:published_time" content="2022-01-25T10:36:10.000Z">
+<meta property="article:modified_time" content="2022-01-25T11:47:33.330Z">
 <meta property="article:author" content="FJP">
+<meta property="article:tag" content="vscode">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://blog.happyfjp.com/2021/08/29/hello-world/">
+<link rel="canonical" href="https://blog.happyfjp.com/2022/01/25/vscode%E6%94%B9%E9%BB%98%E8%AE%A4%E6%8B%93%E5%B1%95%E4%BD%8D%E7%BD%AE/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.happyfjp.com/2021/08/29/hello-world/","path":"2021/08/29/hello-world/","title":"新手教程"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.happyfjp.com/2022/01/25/vscode%E6%94%B9%E9%BB%98%E8%AE%A4%E6%8B%93%E5%B1%95%E4%BD%8D%E7%BD%AE/","path":"2022/01/25/vscode改默认拓展位置/","title":"VSCODE改默认拓展位置"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>新手教程 | 方糖的博客</title>
+<title>VSCODE改默认拓展位置 | 方糖的博客</title>
   
 
 
@@ -122,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="nav-number">1.</span> <span class="nav-text">快速开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0"><span class="nav-number">1.1.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.2.</span> <span class="nav-text">运行服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6"><span class="nav-number">1.3.</span> <span class="nav-text">生成静态文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">部署到远程服务器</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VsCode%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E6%8B%93%E5%B1%95%E4%BD%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">VsCode更改默认拓展位置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">添加启动参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">命令行启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E9%87%8C"><span class="nav-number">1.1.2.</span> <span class="nav-text">添加到快捷方式里</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BE%BF%E6%90%BA%E7%89%88"><span class="nav-number">1.2.</span> <span class="nav-text">使用便携版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%BD%AF%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.3.</span> <span class="nav-text">使用软连接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CMD%E5%BB%BA%E7%AB%8B%E8%BD%AF%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.3.1.</span> <span class="nav-text">CMD建立软连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PowerShell%E5%BB%BA%E7%AB%8B%E8%BD%AF%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.3.2.</span> <span class="nav-text">PowerShell建立软连接</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,7 +178,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.happyfjp.com/2021/08/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://blog.happyfjp.com/2022/01/25/vscode%E6%94%B9%E9%BB%98%E8%AE%A4%E6%8B%93%E5%B1%95%E4%BD%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +191,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          新手教程
+          VSCODE改默认拓展位置
         </h1>
 
         <div class="post-meta-container">
@@ -202,15 +201,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-08-29 17:35:52" itemprop="dateCreated datePublished" datetime="2021-08-29T17:35:52+08:00">2021-08-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-01-17 19:37:40" itemprop="dateModified" datetime="2022-01-17T19:37:40+08:00">2022-01-17</time>
+      <time title="创建时间：2022-01-25 18:36:10 / 修改时间：19:47:33" itemprop="dateCreated datePublished" datetime="2022-01-25T18:36:10+08:00">2022-01-25</time>
     </span>
 
   
@@ -220,7 +213,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>247</span>
+      <span>693</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -231,6 +224,7 @@
     </span>
 </div>
 
+            <div class="post-description"> </div>
         </div>
       </header>
 
@@ -238,19 +232,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>欢迎使用 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! 这是系统生成的第一篇文章。 前往 <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> 获取更多信息。 如果你在使用Hexo过程中遇到任何问题， 你可以在 <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> 找到答案或者在 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a> 联系我。</p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="VsCode更改默认拓展位置"><a href="#VsCode更改默认拓展位置" class="headerlink" title="VsCode更改默认拓展位置"></a>VsCode更改默认拓展位置</h2><blockquote>
+<p>本来用vscode就是图它轻量，启动快。但用着用着就不可避免的希望它功能强大，于是就添加各种插件，体积就变得越来越大。默认存放位置还是在C盘，时间一长就不够用了。</p>
+</blockquote>
+<p>下面介绍三种更改拓展位置的方式</p>
+<h3 id="添加启动参数"><a href="#添加启动参数" class="headerlink" title="添加启动参数"></a>添加启动参数</h3><blockquote>
+<p>软件自带的启动参数，加上就能指定拓展文件夹位置。缺点是每次启动都要加，而且通过其他方式，如右键菜单打开时又会使用原位置。</p>
+</blockquote>
+<h4 id="命令行启动"><a href="#命令行启动" class="headerlink" title="命令行启动"></a>命令行启动</h4><p>启动时添加下面的参数就行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code --extensionHomePath &quot;new path&quot;</span><br></pre></td></tr></table></figure>
 
-<p>更多信息： <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h4 id="添加到快捷方式里"><a href="#添加到快捷方式里" class="headerlink" title="添加到快捷方式里"></a>添加到快捷方式里</h4><p>不多介绍，直接在路径后添加就行。</p>
+<h3 id="使用便携版"><a href="#使用便携版" class="headerlink" title="使用便携版"></a>使用便携版</h3><blockquote>
+<p>便携版可以把所有文件都放到安装目录下。缺点是打开方式受限，需要自己设置，而且不好更新。</p>
+</blockquote>
+<p>首先安装便携版的vscode。然后按照<a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/portable#_migrate-to-portable-mode">这里</a>的方式移动文件就行。</p>
+<h3 id="使用软连接"><a href="#使用软连接" class="headerlink" title="使用软连接"></a>使用软连接</h3><blockquote>
+<p>麻烦一点，但是改完和正常使用一样。由于对软连接不熟，也不知道这玩意要是删了啥的会有啥影响。网上找的一般是cmd执行，但powershell好像不带这个命令（至少我电脑上没有），要用它自己的命令。源地址的文件夹不能已经存在，也就是要先删掉，在建立后会有一个类似快捷方式的文件。目标地址的文件夹要已经存在。</p>
+</blockquote>
+<h4 id="CMD建立软连接"><a href="#CMD建立软连接" class="headerlink" title="CMD建立软连接"></a>CMD建立软连接</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /D &quot;C:\Users\你的用户名\.vscode\extensions&quot; &quot;剪切后的路径D：\extensions&quot;（注意两个文件夹需要同名）</span><br></pre></td></tr></table></figure>
 
-<p>更多信息： <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>更多信息： <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程服务器"><a href="#部署到远程服务器" class="headerlink" title="部署到远程服务器"></a>部署到远程服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>更多信息： <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h4 id="PowerShell建立软连接"><a href="#PowerShell建立软连接" class="headerlink" title="PowerShell建立软连接"></a>PowerShell建立软连接</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">New-Item</span> <span class="literal">-ItemType</span> SymbolicLink `</span><br><span class="line">   <span class="literal">-Path</span> <span class="string">&quot;源地址&quot;</span> `</span><br><span class="line">   <span class="literal">-Target</span> <span class="string">&quot;目标地址&quot;</span></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -259,16 +261,19 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/vscode/" rel="tag"># vscode</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2022/01/18/vscode%E6%8F%92%E4%BB%B6/" rel="prev" title="VSCODE插件开发总结">
+                  <i class="fa fa-chevron-left"></i> VSCODE插件开发总结
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/08/29/%E7%83%AD%E7%83%88%E5%BA%86%E7%A5%9D%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/" rel="next" title="热烈庆祝博客上线">
-                  热烈庆祝博客上线 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
